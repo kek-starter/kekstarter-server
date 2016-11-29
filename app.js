@@ -29,11 +29,10 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-
 /**
  * Express routes
  */
-app.get('/', (req, res) => {
+app.get('/', function(req, res) {
   res.json({ message: 'kek' });
 });
 app.use('/projects', projectRouter);
@@ -43,13 +42,13 @@ app.use('/projects', projectRouter);
  */
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.json({ message: err.message, });
+  res.json({ message: err.message });
 });
 
 /**
  * Start Express server.
  */
-app.listen(app.get('port'), () => {
+app.listen(app.get('port'), function() {
   console.log('Kekstarter server is running');
 });
 
