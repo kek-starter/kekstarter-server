@@ -37,3 +37,30 @@ exports.list = function(req, res, next) {
     res.json({ projects });
   });
 };
+
+exports.update = function(req, res, next) {
+  const project = req.project;
+  const updatedProject = req.body;
+
+  Object.assign(project, updatedProject);
+
+  project.save(function(err, project) {
+    if (err) {
+      return next(err);
+    }
+
+    res.json({ project });
+  });
+}
+
+exports.delete = function(req, res, next) {
+  const project = req.project;
+
+  project.remove(function(err, project) {
+    if (err) {
+      return next(err);
+    }
+
+    res.json({ project });
+  })
+}

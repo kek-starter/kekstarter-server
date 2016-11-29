@@ -9,7 +9,9 @@ router.route('/')
   .post(controller.create);
 
 router.route('/:projectId')
-  .get(controller.read);
+  .get(controller.read)
+  .patch(controller.update)
+  .delete(controller.delete);
 
 router.param('projectId', controller.load);
 
