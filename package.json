@@ -1,0 +1,25 @@
+{
+  "name": "kekstarter-server",
+  "version": "1.0.0",
+  "description": "Server API for Kekstarter",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kek-starter/kekstarter-server.git"
+  },
+  "author": "Kekstarter team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kek-starter/kekstarter-server/issues"
+  },
+  "homepage": "https://github.com/kek-starter/kekstarter-server#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongoose": "^4.7.0",
+    "morgan": "^1.7.0"
+  }
+}
